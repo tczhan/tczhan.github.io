@@ -8,10 +8,10 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	
+
 	// $(".loader").delay(1000).fadeOut("slow");
- //  $("#overlayer").delay(1000).fadeOut("slow");	
-  
+ //  $("#overlayer").delay(1000).fadeOut("slow");
+
 
 	var siteMenuClone = function() {
 
@@ -22,11 +22,11 @@ jQuery(document).ready(function($) {
 
 
 		setTimeout(function() {
-			
+
 			var counter = 0;
       $('.site-mobile-menu .has-children').each(function(){
         var $this = $(this);
-        
+
         $this.prepend('<span class="arrow-collapse collapsed">');
 
         $this.find('.arrow-collapse').attr({
@@ -52,8 +52,8 @@ jQuery(document).ready(function($) {
       } else {
         $this.addClass('active');
       }
-      e.preventDefault();  
-      
+      e.preventDefault();
+
     });
 
 		$(window).resize(function() {
@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
 				$('body').addClass('offcanvas-menu');
 				$this.addClass('active');
 			}
-		}) 
+		})
 
 		// click outisde offcanvas
 		$(document).mouseup(function(e) {
@@ -89,7 +89,7 @@ jQuery(document).ready(function($) {
 				}
 	    }
 		});
-	}; 
+	};
 	siteMenuClone();
 
 
@@ -115,7 +115,7 @@ jQuery(document).ready(function($) {
       range: true,
       min: 0,
       max: 500,
-      values: [ 75, 300 ],
+      values: [ 600 ],
       slide: function( event, ui ) {
         $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
       }
@@ -126,16 +126,16 @@ jQuery(document).ready(function($) {
 	// siteSliderRange();
 
 
-	
+
 	var siteCarousel = function () {
 		if ( $('.nonloop-block-13').length > 0 ) {
 			$('.nonloop-block-13').owlCarousel({
 		    center: false,
 		    items: 1,
-		    loop: true,
+		    loop: false,
 				stagePadding: 0,
 		    margin: 0,
-		    autoplay: true,
+		    autoplay: false,
 		    nav: true,
 				navText: ['<span class="icon-arrow_back">', '<span class="icon-arrow_forward">'],
 		    responsive:{
@@ -163,18 +163,18 @@ jQuery(document).ready(function($) {
 		$('.slide-one-item').owlCarousel({
 	    center: false,
 	    items: 1,
-	    loop: true,
+	    loop: false,
 			stagePadding: 0,
 	    margin: 0,
 	    smartSpeed: 1000,
-	    autoplay: true,
+	    autoplay: false,
 	    pauseOnHover: false,
 	    autoHeight: true,
 	    nav: false,
 	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
 	  });
 
-	  
+
 	};
 	siteCarousel();
 
@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
 	};
 	// siteStellar();
 
-	
+
 	var siteDatePicker = function() {
 
 		if ( $('.datepicker').length > 0 ) {
@@ -225,7 +225,7 @@ jQuery(document).ready(function($) {
 
   var siteScroll = function() {
 
-  	
+
 
   	$(window).scroll(function() {
 
@@ -237,7 +237,7 @@ jQuery(document).ready(function($) {
   			$('.js-sticky-header').removeClass('shrink');
   		}
 
-  	}) 
+  	})
 
   };
   siteScroll();
@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
 	      columnWidth: '.col-sm-3'
 	    });
 	  });
-	  
+
 	  $container.isotope({ filter: '*' });
 
 	    // filter items on button click
